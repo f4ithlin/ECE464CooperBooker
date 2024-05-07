@@ -1,0 +1,116 @@
+.home-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    color: var(--text-darkgray);
+    text-align: center;
+}
+
+@import url(https://db.onlinewebfonts.com/c/079a044d58fa1d86496ff27b6b85315b?family=FoundryGridnik+W01-Regular);
+@import url(https://db.onlinewebfonts.com/c/d3f1342abd8102278499b984bd1c70f3?family=Foundry+Gridnik+W03+Bold);
+@import url(https://db.onlinewebfonts.com/c/94a2eec4adcebc27646229795f10c68f?family=Foundry+Gridnik+W03+Medium);
+
+@font-face {
+    font-family: "FoundryGridnik W01-Regular";
+    src: url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.eot");
+    src: url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.svg#FoundryGridnik W01-Regular")format("svg");
+}
+
+@font-face {
+    font-family: "Foundry Gridnik W03 Bold";
+    src: url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.eot");
+    src: url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.svg#Foundry Gridnik W03 Bold")format("svg");
+}
+
+@font-face {
+    font-family: "Foundry Gridnik W03 Medium";
+    src: url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.eot");
+    src: url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.svg#Foundry Gridnik W03 Medium")format("svg");
+}
+
+
+.event-box h3 {
+    margin-top: 0;
+}
+
+.event-box p {
+    margin: 5px 0;
+}
+
+.events-container-main {
+    flex: 5;
+    /* Larger flex value to make it the primary focus */
+    padding: 10px;
+    height: 600px;
+    /* Fixed height for scrollable area */
+}
+
+.events-container-side {
+    flex: 1;
+    /* Smaller flex value to make it narrower */
+    max-width: 300px;
+    /* Optional, depending on your design preference */
+    padding: 10px;
+    height: 600px;
+    /* Fixed height for scrollable area */
+}
+
+
+.events-scrollable {
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    max-height: 600px;
+    /* Take up all available vertical space */
+    padding: 10px 15px;
+    height: 450px;
+    width: 540px;
+}
+
+
+.event-box {
+    background-color: var(--text-green);
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    font-size: 16px;
+    width: 400px;
+    /* Ensure this width allows space for the button */
+    position: relative;
+}
+
+
+.edit-btn {
+    position: absolute;
+    right: -70px;
+    /* Adjust this value to move the button to the right of the event box */
+    top: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn {
+    position: absolute;
+    right: -70px;
+    /* Adjust this value to move the button to the right of the event box */
+    top: 70px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,177 @@
+@import url(https://db.onlinewebfonts.com/c/079a044d58fa1d86496ff27b6b85315b?family=FoundryGridnik+W01-Regular);
+@import url(https://db.onlinewebfonts.com/c/d3f1342abd8102278499b984bd1c70f3?family=Foundry+Gridnik+W03+Bold);
+@import url(https://db.onlinewebfonts.com/c/94a2eec4adcebc27646229795f10c68f?family=Foundry+Gridnik+W03+Medium);
+
+@font-face {
+    font-family: "FoundryGridnik W01-Regular";
+    src: url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.eot");
+    src: url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/079a044d58fa1d86496ff27b6b85315b.svg#FoundryGridnik W01-Regular")format("svg");
+}
+
+@font-face {
+    font-family: "Foundry Gridnik W03 Bold";
+    src: url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.eot");
+    src: url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/d3f1342abd8102278499b984bd1c70f3.svg#Foundry Gridnik W03 Bold")format("svg");
+}
+
+@font-face {
+    font-family: "Foundry Gridnik W03 Medium";
+    src: url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.eot");
+    src: url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/94a2eec4adcebc27646229795f10c68f.svg#Foundry Gridnik W03 Medium")format("svg");
+}
+
+.all {
+    display: flex;
+    /* Enable Flexbox */
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center children horizontally */
+    text-align: center;
+    /* Ensure text is centered */
+    min-height: 100vh;
+    /* Full viewport height */
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title h1 {
+    font-family: "FoundryGridnik W01-Regular", "Foundry Gridnik W03 Medium", "Foundry Gridnik W03 Bold", sans-serif;
+    font-size: 50px;
+    color: var(--text-red);
+}
+
+
+:root {
+    --text-red: #EC2027;
+    --text-gray: #A8A9AC;
+    --text-blue: #29ABE2;
+    --text-yellow: #FECF0C;
+    --text-green: #00914D;
+    --text-darkgray: #363739;
+}
+
+.sidebar {
+    transition: width 0.5s, padding 0.5s;
+    width: 50px;
+    /* Sidebar is initially 0 width */
+    overflow: hidden;
+    background-color: var(--text-yellow);
+    /* Dark background for the sidebar */
+    height: 100vh;
+    /* Full height */
+    position: fixed;
+    /* Fixed position */
+    top: 0;
+    /* Align to the top */
+    left: 0;
+    /* Align to the left */
+    z-index: 1000;
+    /* Increase z-index to ensure it's above most other content */
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+}
+
+.menu-icon {
+    color: var(--text-blue);
+    /* Menu icon color */
+    cursor: pointer;
+    width: 100%;
+    /* Full width of the initial sidebar */
+    text-align: center;
+    /* Center the icon horizontally */
+    transition: transform 0.5s;
+    /* Smooth transition for rotation or other effects */
+}
+
+.menu-icon:hover {
+    transform: scale(1.2);
+    /* Optional: scale up icon on hover */
+}
+
+.sidebar .menu-items {
+    display: none;
+    /* Hide menu items initially */
+    list-style-type: none;
+    /* Remove bullet points from list */
+    padding: 0;
+    /* Remove padding */
+    width: 100%;
+}
+
+
+.sidebar:hover {
+    width: 200px;
+    /* Adjusted width for expanded sidebar */
+    padding: 0px 20px;
+    /* Add padding to reveal menu items */
+}
+
+.sidebar:hover .menu-items {
+    display: block;
+    /* Show menu items when sidebar is expanded */
+}
+
+.sidebar li a {
+    display: block;
+    /* Make link fill the container */
+    padding: 10px 20px;
+    color: white;
+    /* White text color */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin: 20px;
+    /* Spacing between buttons */
+    background-color: var(--text-blue);
+    /* Button background color */
+    transition: background-color 0.3s;
+    /* Smooth background color transition */
+}
+
+.sidebar li a:hover {
+    background-color: #94c5da;
+    /* Darker background on hover */
+}
+
+.flex-grow {
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center children horizontally */
+    justify-content: center;
+    /* Center children vertically */
+    /* margin-left: 0px; /* Adjust if you want a margin to account for the sidebar */
+    transition: margin-left 0.5s;
+    /* Smooth transition if you decide to dynamically adjust this margin */
+    width: calc(100% - 50px);
+    /* Adjust width to account for sidebar */
+}
+
+.flex-grow.sidebar-expanded {
+    margin-left: 200px;
+    /* Expanded sidebar width */
+    width: calc(100% - 200px);
+    /* Adjust width to account for expanded sidebar */
+}

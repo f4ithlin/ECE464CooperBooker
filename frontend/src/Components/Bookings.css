@@ -1,0 +1,275 @@
+/* Importing fonts for consistency across the app */
+@import url(https://db.onlinewebfonts.com/c/079a044d58fa1d86496ff27b6b85315b?family=FoundryGridnik+W01-Regular);
+@import url(https://db.onlinewebfonts.com/c/d3f1342abd8102278499b984bd1c70f3?family=Foundry+Gridnik+W03+Bold);
+@import url(https://db.onlinewebfonts.com/c/94a2eec4adcebc27646229795f10c68f?family=Foundry+Gridnik+W03+Medium);
+
+.layout-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    /* Adjust based on your spacing preference */
+}
+
+.calendar-container {
+    width: 100vw;
+    /* Adjusts the width to be 100% of the viewport width */
+    height: 80vh;
+    /* Prevents flex item from growing past its content size */
+}
+
+.details-container {
+    width: 300px;
+    /* Set fixed width for details container */
+    flex-shrink: 0;
+    /* Prevents the details container from shrinking */
+}
+
+/* Styling for the booking page container */
+.bookings-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Styling for the filter section */
+.filter-section {
+    flex-basis: 30%;
+    padding: 20px;
+    background-color: var(--text-yellow);
+    border-radius: 8px;
+    color: white;
+}
+
+.filter-section h2 {
+    font-family: "Foundry Gridnik W03 Medium", sans-serif;
+    color: var(--text-yellow);
+}
+
+
+.filter-section .form-control label,
+.filter-section .form-control select {
+    display: block;
+    width: 100%;
+}
+
+.filter-section .form-control select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 5px 0;
+}
+
+/* Styling for the calendar section */
+.calendar-section {
+    flex-grow: 1;
+    background-color: var(--text-gray);
+    border-radius: 8px;
+    color: white;
+}
+
+.time-picker-form-control {
+    margin-top: 5px;
+}
+
+
+
+.rbc-toolbar button {
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-family: "FoundryGridnik W01-Regular", sans-serif;
+}
+
+.rbc-toolbar button:hover {
+    background-color: var(--text-blue);
+}
+
+/* General element adjustments for consistency */
+body {
+    font-family: "FoundryGridnik W01-Regular", "Foundry Gridnik W03 Medium", "Foundry Gridnik W03 Bold", sans-serif;
+}
+
+
+
+/* Adjustments to the filter section for broader use */
+.filter-section {
+    padding: 20px;
+    background-color: var(--text-yellow);
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 20px;
+    /* Added for spacing between filters */
+}
+
+/* New column layout for filters */
+.filters-container {
+    display: flex;
+    gap: 20px;
+    /* Adjust this value based on your design preference */
+}
+
+/* Individual filter columns */
+.filter-column {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Spacing between filters within a column */
+}
+
+/* Adjustments to form control for better spacing and alignment */
+.filter-section .form-control {
+    margin-bottom: 20px;
+    /* Increased spacing between form controls */
+}
+
+/* Specific styles for the date and time picker */
+.date-time-picker {
+    background: transparent;
+    border: 1px solid white;
+    /* Example styling, adjust as needed */
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Styles for room list */
+.room-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.room-list li {
+    background-color: var(--text-gray);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.today-btn {
+    color: inherit;
+    /* This will be dynamically changed in JS if needed */
+    background: none;
+    box-shadow: none;
+    text-transform: none;
+    margin-right: auto;
+}
+
+.available-rooms-container {
+    position: relative;
+    margin-top: 5px;
+    /* Adjust based on your layout */
+}
+
+.available-rooms-label {
+    position: absolute;
+    top: -10px;
+    /* Slightly adjusted for visibility */
+    left: 12px;
+    background-color: #fff;
+    padding: 0 2px;
+    font-size: 0.8rem !important;
+    color: var(--text-green);
+    z-index: 2;
+}
+
+.available-rooms-box {
+    border: 1px solid var(--text-green);
+    border-radius: 4px;
+    padding: 28px 8px 8px;
+    overflow-y: auto;
+    height: 25vh;
+    position: relative;
+    padding-top: 0;
+    /* Reduce or remove top padding to decrease space between label and list */
+
+}
+
+
+.room-details-label {
+    position: absolute;
+    top: -10px;
+    /* Adjust this value as needed to visually center the label in the padding area of the details box */
+    left: 12px;
+    background-color: #fff;
+    padding: 0 4px;
+    /* Added some horizontal padding for better label appearance */
+    font-size: 0.8rem !important;
+    color: var(--text-green);
+    z-index: 2;
+}
+
+
+.room-details-box {
+    border: 1px solid var(--text-green);
+    border-radius: 4px;
+    padding: 28px 8px 8px;
+    overflow-y: auto;
+    height: 20vh;
+    position: relative;
+    padding-top: 12px;
+
+}
+
+
+.room-details-container {
+    position: relative;
+    /* This ensures that absolutely positioned children are relative to this container */
+    margin-top: 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+.detail-sentence {
+    margin-bottom: 12px !important;
+    /* Spacing between sentences */
+    text-align: left;
+    padding-left: 15px;
+    /* Ensure text aligns to the left */
+    font-family: "FoundryGridnik W01-Regular", "Foundry Gridnik W03 Medium", "Foundry Gridnik W03 Bold", sans-serif !important;
+    /* Ensure font consistency */
+    /* Adjust text color as needed */
+    display: block;
+    /* Ensure that each detail sentence behaves like a block for margin to take effect */
+}
+
+.detail-heading {
+    font-weight: bold;
+    /* Make headings bold */
+    color: var(--primary-color);
+    /* Change to your preferred color, ensure variable is defined */
+    margin-right: 4px;
+    /* Optional: adds a little space after the heading */
+}
+
+.event-details-modal {
+    background-color: #fff;
+    /* Adjust background color as needed */
+    color: black;
+    /* Text color */
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.event-details-title {
+    font-family: "Foundry Gridnik W03 Bold", sans-serif !important;
+    /* Bold title font */
+    color: var(--text-blue);
+    /* Title color */
+    margin-bottom: 15px;
+}
+
+.event-details-description {
+    line-height: 1.5;
+    font-family: "FoundryGridnik W01-Regular", "Foundry Gridnik W03 Medium", "Foundry Gridnik W03 Bold", sans-serif !important;
+    /* Ensure font consistency */
+    /* Improved readability */
+}

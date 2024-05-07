@@ -1,0 +1,72 @@
+.login-box .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.login-box .form-group label {
+    margin-right: 10px;
+    flex-shrink: 0;
+    /* Prevent the label from shrinking */
+}
+
+.login-box .form-group input {
+    flex-grow: 1;
+    padding: 8px 0;
+    /* Reduce padding to minimize height */
+    border: none;
+    border-bottom: 2px solid #ccc;
+    /* Use a bottom border to represent the input */
+    background-color: transparent;
+    /* Ensure input background is transparent */
+    color: var(--text-darkgray);
+    /* Input text color */
+    background-image: linear-gradient(to right, var(--text-yellow) 0%, var(--text-yellow) 100%);
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    background-size: 0% 2px;
+    transition: background-size 0.5s ease;
+}
+
+.login-box .form-group input:hover {
+    outline: none;
+    /* Remove the default focus outline */
+    background-size: 100% 2px;
+    /* Expand the background to full width */
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    /* Adjust margin as needed */
+    background-color: var(--text-blue);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #94c5da;
+}
+
+.login-box {
+    font-family: "FoundryGridnik W01-Regular", "Foundry Gridnik W03 Medium", "Foundry Gridnik W03 Bold", sans-serif;
+    font-size: 20px;
+    color: var(--text-darkgray);
+}
+
+.full-width {
+    width: 100%;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+.input-has-value {
+    background-size: 100% 2px !important;
+    /* Ensure this style overrides any other */
+}
