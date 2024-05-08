@@ -2,6 +2,9 @@
 
 This project includes both a frontend web application and a backend server, designed to manage and book events efficiently. Our database is hosted on Google Cloud Platform using PostgreSQL.
 
+# Demo Video Link 
+https://youtu.be/Qx_s0G5Z8LA
+
 # Getting Started
 
 These instructions will guide you through getting a copy of the project up and running on your local machine for development and testing purposes.
