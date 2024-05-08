@@ -25,8 +25,3 @@ Database: cooperbookerdb
 User: postgres
 Password: ant farm
 Port: 5432
-
-
-
-
-
